@@ -1,22 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
+import useFetchGif from "../hooks/useFetchGif";
+import { GifGridItem } from "./GifGridItem";
 
 export const GifGrid = ({ category }) => {
-  useEffect(() => {
-    const getGifs = async () => {
-      const url =
-        "https://api.giphy.com/v1/gifs/search?q=dragonball&limit=10&api_key=E8KIYzxPDiknto5CRSHlE0rfvq2gH8WR";
-      try {
-        const res = await fetch(url);
-        const { data } = await res.json();
-        const gifs = data.map((gif) => ({
-          id: gif.id,
-          img: gif.images?.downsized_medium.url,
-          title: gif.title,
-        }));
-        console.log(gifs);
-      } catch (error) {}
-    };
-    getGifs();
-  }, []);
-  return <li key={category}>{category}</li>;
+  const { data, loading } = useFetchGif(category);
+  return (
+    <>
+      <h3>{category}</h3>
+      <section className="card-grid">
+        {loading && <h5>Cargando...</h5>}
+        {data.map((img) => (
+          <GifGridItem key={img.id} {...img} />
+        ))}
+      </section>
+    </>
+  );
 };
