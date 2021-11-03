@@ -2,8 +2,8 @@ import { useState } from "react";
 import AddCategory from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
-const GiftExpertApp = () => {
-  const [categories, setCategories] = useState(["one"]);
+const GiftExpertApp = ({ categoris = [] }) => {
+  const [categories, setCategories] = useState(categoris);
   return (
     <div>
       <h2>GifExpertApp</h2>

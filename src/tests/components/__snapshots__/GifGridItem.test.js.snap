@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas para <GifGridItem/> debe ejecutar <GifGridItem/> correctamente 1`] = `
+<article
+  className="card animate__animated animate__fadeInLeft"
+>
+  <h3>
+    titulo
+  </h3>
+  <img
+    alt="titulo"
+    loading="lazy"
+    src="https://giphy.com/gifs/TOEIAnimationUK-goku-dragon-ball-super-clnwbP8SbJUvb0Nxty"
+    style={
+      Object {
+        "flexGrow": 1,
+        "objectFit": "contain",
+      }
+    }
+  />
+</article>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas con <GifGrid/> debe ejecutar el componente 1`] = `
+<Fragment>
+  <h3>
+    goku
+  </h3>
+  <section
+    className="card-grid"
+  >
+    <h5>
+      Cargando...
+    </h5>
+  </section>
+</Fragment>
+`;

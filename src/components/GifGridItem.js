@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 export const GifGridItem = ({ img, title, id }) => {
   return (
     <article className="card animate__animated animate__fadeInLeft">
@@ -12,4 +12,9 @@ export const GifGridItem = ({ img, title, id }) => {
       />
     </article>
   );
+};
+
+GifGridItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
